@@ -1,0 +1,670 @@
+---
+- word: abate
+  meaning: subside or moderate
+- word: aberrant
+  meaning: abnormal or deviant
+- word: abeyance
+  meaning: suspended action
+- word: abscond
+  meaning: depart secretly and hide
+- word: abstemious
+  meaning: sparing in eating and drinking; temperate
+- word: admonish
+  meaning: warn; reprove
+- word: adulterate
+  meaning: make impure by adding inferior or tainted substances
+- word: aesthetic
+  meaning: artistic; dealing with or capable of appreciating the beautiful
+- word: aggregate
+  meaning: gather; accumulate
+- word: alacrity
+  meaning: cheerful promptness; eagerness
+- word: alleviate
+  meaning: relieve
+- word: amalgamate
+  meaning: combine; unite in one body
+- word: ambiguous
+  meaning: unclear or doubtful in meaning
+- word: ambivalence
+  meaning: the state of having contradictory or conflicting emotional attitudes
+- word: ameliorate
+  meaning: improve
+- word: anachronism
+  meaning: something or someone misplaced in time
+- word: analogous
+  meaning: comparable
+- word: anarchy
+  meaning: absence of governing body; state of disorder
+- word: anomalous
+  meaning: abnormal; irregular
+- word: antipathy
+  meaning: aversion; dislike
+- word: apathy
+  meaning: lack of caring; indifference
+- word: appease
+  meaning: pacify or soothe; relieve
+- word: apprise
+  meaning: inform
+- word: approbation
+  meaning: approval
+- word: appropriate
+  meaning: acquire; take possession of for one's own use
+- word: arduous
+  meaning: hard; strenuous
+- word: artless
+  meaning: without guile; open and honest
+- word: ascetic
+  meaning: practicing self-denial; austere
+- word: assiduous
+  meaning: diligent
+- word: assuage
+  meaning: ease or lessen (pain); satisfy (hunger); soothe (anger)
+- word: attenuate
+  meaning: make thinner; weaken or lessen (in density, force, degree)
+- word: audacious
+  meaning: daring; bold
+- word: austere
+  meaning: forbiddingly stern; severely simple and unornamented
+- word: aver
+  meaning: assert confidently or declare; as used in law, state formally as a fact
+- word: banal
+  meaning: hackneyed; commonplace; trite; lacking originality
+- word: belie
+  meaning: contradict; give a false impression
+- word: beneficent
+  meaning: kindly; doing good
+- word: bolster
+  meaning: support; reinforce
+- word: bombastic
+  meaning: pompous; using inflated language
+- word: boorish
+  meaning: rude; insensitive
+- word: burgeon
+  meaning: grow forth; send out buds
+- word: burnish
+  meaning: make shiny by rubbing; polish
+- word: buttress
+  meaning: support; prop up
+- word: cacophonous
+  meaning: discordant; inharmonious
+- word: capricious
+  meaning: unpredictable; fickle
+- word: castigation
+  meaning: punishment; severe criticism
+- word: catalyst
+  meaning: agent that stimulates or precipitates a reaction, development, or change
+- word: caustic
+  meaning: burning; sarcastically biting
+- word: chicanery
+  meaning: trickery; deception
+- word: coagulate
+  meaning: thicken; congeal; clot
+- word: coda
+  meaning: concluding section of a musical or literary composition; something that
+    summarizes
+- word: cogent
+  meaning: convincing
+- word: commensurate
+  meaning: corresponding in extent, degree, amount, etc.; proportionate
+- word: compendium
+  meaning: brief, comprehensive summary
+- word: complaisant
+  meaning: trying to please; overly polite; obliging
+- word: compliant
+  meaning: yielding; conforming to requirements
+- word: conciliatory
+  meaning: reconciling; soothing
+- word: condone
+  meaning: overlook; forgive; give tacit approval; excuse
+- word: confound
+  meaning: confuse; puzzle
+- word: connoisseur
+  meaning: person competent to act as a judge of art, etc.; a lover of an art
+- word: contention
+  meaning: claim; thesis
+- word: contentious
+  meaning: quarrelsome
+- word: contrite
+  meaning: penitent
+- word: conundrum
+  meaning: riddle; difficult problem
+- word: converge
+  meaning: approach; tend to meet; come together
+- word: convoluted
+  meaning: coiled around; involved; intricate
+- word: craven
+  meaning: cowardly
+- word: daunt
+  meaning: intimidate; frighten
+- word: decorum
+  meaning: propriety; orderliness and good taste in manners
+- word: default
+  meaning: failure to act
+- word: deference
+  meaning: courteous regard for another's wish
+- word: delineate
+  meaning: portray; depict; sketch
+- word: denigrate
+  meaning: blacken
+- word: deride
+  meaning: ridicule; make fun of
+- word: derivative
+  meaning: unoriginal; obtained from another source
+- word: desiccate
+  meaning: dry up
+- word: desultory
+  meaning: aimless; haphazard; digressing at random
+- word: deterrent
+  meaning: something that discourages; hindrance
+- word: diatribe
+  meaning: bitter scolding; invective
+- word: dichotomy
+  meaning: split; branching into two parts (especially contradictory ones)
+- word: diffidence
+  meaning: shyness
+- word: diffuse
+  meaning: wordy; rambling; spread out (like a gas)
+- word: digression
+  meaning: wandering away from the subject
+- word: dirge
+  meaning: lament with music
+- word: disabuse
+  meaning: correct a false impression; undeceive
+- word: discerning
+  meaning: mentally quick and observant; having insight
+- word: discordant
+  meaning: not harmonious; conflicting
+- word: discredit
+  meaning: defame; destroy confidence in; disbelieve
+- word: discrepancy
+  meaning: lack of consistency; difference
+- word: discrete
+  meaning: separate; unconnected; consisting of distinct parts
+- word: disingenuous
+  meaning: lacking genuine candor; insincere
+- word: disinterested
+  meaning: unprejudiced
+- word: disjointed
+  meaning: lacking coherence
+- word: dismiss
+  meaning: eliminate from consideration; reject
+- word: disparage
+  meaning: belittle
+- word: disparate
+  meaning: basically different; unrelated
+- word: dissemble
+  meaning: disguise; pretend
+- word: disseminate
+  meaning: distribute; spread; scatter (like seeds)
+- word: dissolution
+  meaning: disintegration; looseness in morals
+- word: dissonance
+  meaning: discord; opposite of harmony
+- word: distend
+  meaning: expand; swell out
+- word: distill
+  meaning: purify; refine; concentrate
+- word: diverge
+  meaning: vary; go in different directions from the same point
+- word: divest
+  meaning: strip; deprive
+- word: document
+  meaning: provide written evidence
+- word: dogmatic
+  meaning: opinionated; arbitrary; doctrinal
+- word: dormant
+  meaning: sleeping; lethargic; latent
+- word: dupe
+  meaning: someone easily fooled
+- word: ebullient
+  meaning: showing excitement; overflowing with enthusiasm
+- word: eclectic
+  meaning: selective; composed of elements drawn from disparate sources
+- word: efficacy
+  meaning: power to produce desired effect
+- word: effrontery
+  meaning: impudence; shameless boldness; sheer nerve; presumptuousness
+- word: elegy
+  meaning: poem or song expressing lamentation
+- word: elicit
+  meaning: draw out by discussion
+- word: embellish
+  meaning: adorn; ornament; enhance, as a story
+- word: empirical
+  meaning: base on experience
+- word: emulate
+  meaning: imitate; rival
+- word: endemic
+  meaning: prevailing among a specific group of people or an area
+- word: enervate
+  meaning: weaken
+- word: engender
+  meaning: cause; produce
+- word: enhance
+  meaning: increase; improve
+- word: ephemeral
+  meaning: short-lived; fleeting
+- word: equanimity
+  meaning: calmness of temperament; composure
+- word: equivocate
+  meaning: lie, mislead; attempt to conceal the truth
+- word: erudite
+  meaning: learned; scholarly
+- word: esoteric
+  meaning: hard to understand; known only to the chosen few
+- word: eulogy
+  meaning: expression of praise, often on the occasion of someone's death
+- word: euphemism
+  meaning: mild expression in place of an unpleasant one
+- word: exacerbate
+  meaning: worsen; embitter
+- word: exculpate
+  meaning: clear from blame
+- word: exigency
+  meaning: urgent situation; pressing needs or demands; state of requiring immediate
+    attention
+- word: extrapolation
+  meaning: projection; superfluous
+- word: facetious
+  meaning: joking (often inappropriately); humorous
+- word: facilitate
+  meaning: help bring about; make less difficult
+- word: fallacious
+  meaning: false; misleading
+- word: fatuous
+  meaning: brainless; inane; foolish, yet smug
+- word: fawning
+  meaning: trying to please by behaving obsequiously, flattering or cringing
+- word: felicitous
+  meaning: apt; suitably expressed; well chosen
+- word: fervor
+  meaning: glowing ardor; intensity of feeling
+- word: flag
+  meaning: droop; grow feeble
+- word: fledgling
+  meaning: inexperienced
+- word: flout
+  meaning: reject; mock; show contempt for
+- word: foment
+  meaning: stir up; instigate
+- word: forestall
+  meaning: prevent by taking action in advance
+- word: frugality
+  meaning: thrift; economy
+- word: futile
+  meaning: useless; hopeless; ineffectual
+- word: gainsay
+  meaning: deny
+- word: garrulous
+  meaning: loquacious; wordy; talkative
+- word: goad
+  meaning: urge on
+- word: gouge
+  meaning: overcharge
+- word: grandiloquent
+  meaning: pompous; bombastic; using high-sounding language
+- word: gregarious
+  meaning: sociable
+- word: guileless
+  meaning: without deceit
+- word: gullible
+  meaning: easily deceived
+- word: harangue
+  meaning: long, passionate, and vehement speech
+- word: homogenous
+  meaning: of the same kind
+- word: hyperbole
+  meaning: exaggeration; overstatement
+- word: iconoclast
+  meaning: attacking cherished traditions
+- word: idolatry
+  meaning: worship of idols; excessive admiration
+- word: immutable
+  meaning: unchangeable
+- word: impair
+  meaning: injure; hurt
+- word: impassive
+  meaning: without feeling; imperturbable; stoical
+- word: impede
+  meaning: hinder, block
+- word: impermeable
+  meaning: impervious; not permitting passage through its substance
+- word: imperturbable
+  meaning: calm; placid
+- word: impervious
+  meaning: impenetrable; incapable of being damaged or distressed
+- word: implacable
+  meaning: incapable of being pacified
+- word: implicit
+  meaning: understood but not stated
+- word: implode
+  meaning: burst inward
+- word: inadvertently
+  meaning: unintentionally; by oversight; carelessly
+- word: inchoate
+  meaning: recently begun; rudimentary; elementary
+- word: incongruity
+  meaning: lack of harmony; absurdity
+- word: inconsequential
+  meaning: insignificant; unimportant
+- word: incorporate
+  meaning: introduce something into a larger whole; combine; unite
+- word: indeterminate
+  meaning: uncertain; not clearly fixed; indefinite
+- word: indigence
+  meaning: poverty
+- word: indolent
+  meaning: lazy
+- word: inert
+  meaning: inactive; lacking power to move
+- word: ingenuous
+  meaning: naive and trusting; young; unsophisticated
+- word: inherent
+  meaning: firmly established by nature or habit
+- word: innocuous
+  meaning: harmless
+- word: insensible
+  meaning: unconscious; unresponsive
+- word: insinuate
+  meaning: hint; imply; creep in
+- word: insipid
+  meaning: lacking in flavor; dull
+- word: insularity
+  meaning: narrow-mindedness; isolation
+- word: intractable
+  meaning: unruly; stubborn; unyielding
+- word: intransigence
+  meaning: refusal of any compromise; stubbornness
+- word: inundate
+  meaning: overwhelm; flood; submerge
+- word: inured
+  meaning: accustomed; hardened
+- word: invective
+  meaning: abuse
+- word: irascible
+  meaning: irritable; easily angered
+- word: irresolute
+  meaning: uncertain how to act; weak
+- word: itinerary
+  meaning: plan of a trip
+- word: laconic
+  meaning: brief and to the point
+- word: lassitude
+  meaning: languor; weariness
+- word: latent
+  meaning: potential but undeveloped; dormant; hidden
+- word: laud
+  meaning: praise
+- word: lethargic
+  meaning: drowsy; dull
+- word: levee
+  meaning: earthen or stone embankment to prevent flooding
+- word: levity
+  meaning: lack of seriousness or steadiness; frivolity
+- word: log
+  meaning: record of a voyage or flight; record of day-to-day activities
+- word: loquacious
+  meaning: talkative
+- word: lucid
+  meaning: easily understood; clear; intelligible
+- word: luminous
+  meaning: shining; issuing light
+- word: magnanimity
+  meaning: generosity
+- word: malingerer
+  meaning: one who feigns illness to escape duty
+- word: malleable
+  meaning: capable of being shaped by pounding; impressionable
+- word: maverick
+  meaning: rebel; nonconformist
+- word: mendacious
+  meaning: lying; habitually dishonest
+- word: metamorphosis
+  meaning: change of form
+- word: meticulous
+  meaning: excessively careful; painstaking; scrupulous
+- word: misanthrope
+  meaning: one who hates mankind
+- word: mitigate
+  meaning: lessen in intensity; moderate; appease
+- word: mollify
+  meaning: soothe
+- word: morose
+  meaning: ill-humored; sullen; melancholy
+- word: mundane
+  meaning: worldly as opposed to spiritual; everyday
+- word: negate
+  meaning: cancel out; nullify; deny
+- word: neophyte
+  meaning: recent convert; beginner
+- word: obdurate
+  meaning: stubborn
+- word: obsequious
+  meaning: slavishly attentive; servile; sycophantic
+- word: obviate
+  meaning: make unnecessary; get rid of
+- word: occlude
+  meaning: shut; close
+- word: officious
+  meaning: meddlesome; excessively pushy in offering one's services
+- word: onerous
+  meaning: burdensome
+- word: opprobium
+  meaning: infamy; vilification
+- word: oscillate
+  meaning: vibrate pendulumlike; waver
+- word: ostentatious
+  meaning: showy; pretentious; trying to attract attention
+- word: paragon
+  meaning: model of perfection
+- word: partisan
+  meaning: one-sided; prejudiced; committed to a party
+- word: pathological
+  meaning: pertaining to disease
+- word: paucity
+  meaning: scarcity
+- word: pedantic
+  meaning: showing off learning; bookish
+- word: penchant
+  meaning: strong inclination; liking
+- word: penury
+  meaning: severe poverty; stinginess
+- word: perennial
+  meaning: something long-lasting
+- word: perfidious
+  meaning: treacherous; disloyal
+- word: perfunctory
+  meaning: superficial; not thorough; lacking interest, care, or enthusiasm
+- word: permeable
+  meaning: penetrable; porous; allowing liquids or gas to pass through
+- word: pervasive
+  meaning: spread throughout
+- word: phlegmatic
+  meaning: calm; not easily disturbed
+- word: piety
+  meaning: devoutness; reverence for God
+- word: placate
+  meaning: pacify; conciliate
+- word: plasticity
+  meaning: ability to be molded
+- word: platitude
+  meaning: trite remark; commonplace statement
+- word: plethora
+  meaning: excess; overabundance
+- word: plummet
+  meaning: fall sharply
+- word: porous
+  meaning: full of pores; like a sieve
+- word: pragmatic
+  meaning: practical (as opposed to idealistic)
+- word: preamble
+  meaning: introductory statement
+- word: precarious
+  meaning: uncertain; risky
+- word: precipitate
+  meaning: rash; premature; hasty; sudden
+- word: precursor
+  meaning: forerunner; harbinger
+- word: presumptuous
+  meaning: arrogant; taking liberties
+- word: prevaricate
+  meaning: lie
+- word: pristine
+  meaning: characteristic of earlier times; primitive; unspoiled
+- word: probity
+  meaning: uprightness; incorruptibility
+- word: problematic
+  meaning: doubtful; unsettled; questionable; perplexing
+- word: prodigal
+  meaning: wasteful; reckless with money
+- word: profound
+  meaning: deep; not superficial; complete
+- word: prohibitive
+  meaning: inclined to prevent or forbid
+- word: proliferate
+  meaning: grow rapidly; spread; multiply
+- word: propensity
+  meaning: natural inclination
+- word: propitiate
+  meaning: appease
+- word: propriety
+  meaning: fitness; correct conduct
+- word: proscribe
+  meaning: ostracize; banish; outlaw
+- word: pungent
+  meaning: stinging; sharp in taste or smell; caustic
+- word: qualified
+  meaning: limited; restricted
+- word: quibble
+  meaning: minor objection or complaint
+- word: quiescent
+  meaning: at rest; dormant; temporarily inactive
+- word: rarefied
+  meaning: made less dense (of a gas)
+- word: recalcitrant
+  meaning: obstinately stubborn; determined to resist authority; unruly
+- word: recant
+  meaning: disclaim or disavow; retract a previous statement; openly confess error
+- word: recluse
+  meaning: hermit; loner
+- word: recondite
+  meaning: abstruse; profound; secret
+- word: refractory
+  meaning: stubborn; unmanageable
+- word: refute
+  meaning: disprove
+- word: relegate
+  meaning: banish to an inferior position; delegate; assign
+- word: reproach
+  meaning: express disapproval or disappointment
+- word: reprobate
+  meaning: person hardened by sin, devoid of a sense of decency
+- word: repudiate
+  meaning: disown; disavow
+- word: rescind
+  meaning: cancel
+- word: resolution
+  meaning: determination
+- word: resolve
+  meaning: determination; firmness of purpose
+- word: reticent
+  meaning: reserved; uncommunicative; inclined to silence
+- word: reverent
+  meaning: respectful; worshipful
+- word: sage
+  meaning: person celebrated for wisdom
+- word: salubrious
+  meaning: healthful
+- word: sanction
+  meaning: approve; ratify
+- word: satiate
+  meaning: satisfy fully
+- word: saturate
+  meaning: soak thoroughly
+- word: savor
+  meaning: enjoy; have a distinctive flavor, smell, or quality
+- word: secrete
+  meaning: hide away or cache; produce and release a substance into an organism
+- word: shard
+  meaning: fragment; generally of pottery
+- word: skeptic
+  meaning: doubter; person who suspends judgment until having examined the evidence
+    supporting a point of view
+- word: solicious
+  meaning: worried, concerned
+- word: soporific
+  meaning: sleep-causing; marked by sleepiness
+- word: specious
+  meaning: seemingly reasonable but incorrect; misleading (often intentional)
+- word: spectrum
+  meaning: colored band produced when a beam of light passes through a prism
+- word: sporadic
+  meaning: occurring irregularly
+- word: stigma
+  meaning: token of disgrace; brand
+- word: stint
+  meaning: be thrifty; set limits
+- word: stipulate
+  meaning: make express conditions, specify
+- word: stolid
+  meaning: dull; impassive
+- word: striated
+  meaning: marked with parallel bands; grooved
+- word: strut
+  meaning: pompous walk
+- word: strut
+  meaning: supporting bar
+- word: subpoena
+  meaning: writ summoning a witness to appear
+- word: subside
+  meaning: settle down; descend; grow quiet
+- word: substantiate
+  meaning: establish by evidence; verify; support
+- word: supersede
+  meaning: cause to be set aside; replace; make obsolete
+- word: supposition
+  meaning: hypothesis; surmise
+- word: tacit
+  meaning: understood; not put into words
+- word: tangential
+  meaning: peripheral; only slightly connected; digressing
+- word: tenuous
+  meaning: thin; rare; slim
+- word: tirade
+  meaning: extended scolding; denunciation; harangue
+- word: torpor
+  meaning: lethargy; sluggishness; dormancy
+- word: tortuous
+  meaning: winding; full of curves
+- word: tractable
+  meaning: docile; easily managed
+- word: transgression
+  meaning: violation of a law; sin
+- word: truculence
+  meaning: aggressiveness; ferocity
+- word: vacillate
+  meaning: waver; fluctuate
+- word: venerate
+  meaning: revere
+- word: veracious
+  meaning: truthful
+- word: verbose
+  meaning: wordy
+- word: viable
+  meaning: practical or workable; capable of maintaining life
+- word: viscous
+  meaning: sticky, gluey
+- word: vituperative
+  meaning: abusive; scolding
+- word: volatile
+  meaning: changeable; explosive; evaporating rapidly
+- word: warranted
+  meaning: justified; authorized
+- word: wary
+  meaning: very cautious
+- word: welter
+  meaning: turmoil; bewildering jumble
+- word: whimsical
+  meaning: capricious; fanciful
+- word: zealot
+  meaning: fanatic; person who shows excessive zeal

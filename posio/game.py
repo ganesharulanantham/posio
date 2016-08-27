@@ -1,17 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import sqlite3
+import yaml
 import os
 from math import sqrt, pi
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
-
-# Earth ellipsoid equator length in meters
-EARTH_EQUATOR = 6378137.0
-
-# Convert degrees to kilometres
-DISTANCE_PER_DEGREE = (2 * pi * EARTH_EQUATOR) / (360 * 1000)
-
 
 class Game:
     def __init__(self, game_id, score_max_distance=1000, max_response_time=5, leaderboard_answer_count=20,
@@ -29,7 +23,7 @@ class Game:
         self.leaderboard_answer_count = leaderboard_answer_count
         self.max_response_time = max_response_time
         self.between_turns_duration = between_turns_duration
-        self.cities = self.get_cities()
+        self.words = self.get_words()
         self.players = []
         self.answers = []
         self.turn_number = 0
@@ -51,24 +45,29 @@ class Game:
         # Update turn number
         self.turn_number += 1
 
-    def get_current_city(self):
-        # Return a different city for each turn
-        return self.cities[self.turn_number % len(self.cities)]
+    def get_current_word(self):
+       return self.words[self.turn_number % len(self.words)]
 
-    def store_answer(self, player_sid, latitude, longitude):
+    def store_answer(self, player_sid, value):
         # Get the player corresponding to the given sid
         player = self.get_player(player_sid)
 
         if player:
-            # Get the distance between player answer and correct answer
-            current_city = self.get_current_city()
-            distance = self.plane_distance(current_city['latitude'], current_city['longitude'], latitude, longitude)
+            current_word = self.get_current_word()
+            print 'current word'
+            print current_word['meaning']
+            print 'value'
+            print value
+            if current_word['meaning'] == value:
+                correct_score = 10
+            else:
+                correct_score = 0
 
             # Compute player score for this answer
-            score = self.score(distance)
+            score = self.score(correct_score)
 
             # Store player answer
-            answer = Answer(latitude, longitude, score, distance)
+            answer = Answer(value, score)
             player.add_answer(self.turn_number, answer)
 
     def get_current_turn_ranks(self):
@@ -93,10 +92,7 @@ class Game:
 
         return ranked_scores
 
-    def score(self, distance):
-        # Convert distance to a score
-        score = self.score_max_distance - distance
-
+    def score(self, score):
         # Score cannot be negative
         return max(0, round(score))
 
@@ -111,33 +107,12 @@ class Game:
         return player
 
     @staticmethod
-    def get_cities():
-        # Connect to the city database
-        conn = sqlite3.connect(os.path.join(DIR_PATH, '../data/cities.db'))
-
-        # Select every cities in random order
-        c = conn.cursor()
-
-        cities = []
-        for city_data in c.execute('SELECT name, country, latitude, longitude FROM cities ORDER BY RANDOM()'):
-            cities.append({
-                'name': city_data[0],
-                'country': city_data[1],
-                'latitude': city_data[2],
-                'longitude': city_data[3]
-            })
-
-        # Close connection
-        conn.close()
-
-        return cities
-
-    @staticmethod
-    def plane_distance(latitude1, longitude1, latitude2, longitude2):
-        # Calculates distance as points on a plane
-        px = longitude2 - longitude1
-        py = latitude2 - latitude1
-        return sqrt(px * px + py * py) * DISTANCE_PER_DEGREE
+    def get_words():
+        with open(os.path.join(DIR_PATH, '../web-parser/question_set.yml'), 'r') as stream:
+            try:
+                return yaml.load(stream)
+            except yaml.YAMLError as exc:
+                print(exc)
 
 
 class Player:
@@ -164,8 +139,6 @@ class Player:
 
 
 class Answer:
-    def __init__(self, latitude, longitude, score, distance):
-        self.latitude = latitude
-        self.longitude = longitude
+    def __init__(self, value, score):
+        self.value = value
         self.score = score
-        self.distance = distance
