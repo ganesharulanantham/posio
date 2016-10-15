@@ -60,13 +60,11 @@ class GameMaster:
         # Start a new turn
         game.start_new_turn()
 
-        # Get the city for this turn
-        city = game.get_current_city()
+        # Get the word for this turn
+        word = game.get_current_word()
 
-        # Send the infos on the new city to locate to every players in the game
-        socketio.emit('new_turn',
-                      {'city': city['name'], 'country': city['country'], 'country_code': city['country']},
-                      room=game.game_id)
+        # Send the infos on the new word to locate to every players in the game
+        socketio.emit('new_turn', word, room=game.game_id)
 
     @classmethod
     def end_turn(cls, game):
@@ -77,17 +75,18 @@ class GameMaster:
         player_count = len(ranked_players)
 
         # Send the end of turn signal and the correct and best answer to every players in the game
-        city = game.get_current_city()
-        turn_results = {'correct_answer': {'name': city['name'],
-                                           'lat': city['latitude'],
-                                           'lng': city['longitude']}}
+        word = game.get_current_word()
+        turn_results = {'correct_answer': word['meaning']}
 
         if player_count > 0:
             turn_results['best_answer'] = {
-                'distance': ranked_players[0].answers[game.turn_number].distance,
-                'lat': ranked_players[0].answers[game.turn_number].latitude,
-                'lng': ranked_players[0].answers[game.turn_number].longitude
+            'meaning': word['meaning']
             }
+            # turn_results['best_answer'] = {
+            #     'distance': ranked_players[0].answers[game.turn_number].distance,
+            #     'lat': ranked_players[0].answers[game.turn_number].latitude,
+            #     'lng': ranked_players[0].answers[game.turn_number].longitude
+            # }
 
         socketio.emit('end_of_turn', turn_results, room=game.game_id)
 
@@ -97,10 +96,7 @@ class GameMaster:
                           {
                               'rank': rank + 1,
                               'total': player_count,
-                              'distance': player.answers[game.turn_number].distance,
-                              'score': player.answers[game.turn_number].score,
-                              'lat': player.answers[game.turn_number].latitude,
-                              'lng': player.answers[game.turn_number].longitude
+                              'score': player.answers[game.turn_number].score
                           },
                           room=player.sid)
 

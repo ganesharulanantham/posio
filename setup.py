@@ -9,6 +9,7 @@ setup(name='posio',
       install_requires=[
           'flask',
           'flask-socketio',
-          'eventlet'
+          'eventlet',
+          'pyyaml'
       ],
       zip_safe=False)

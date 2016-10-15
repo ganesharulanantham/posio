@@ -1,6 +1,4 @@
-var map = null,
-    progressBar = null,
-    markerGroup = null,
+var progressBar = null,
     socket = null,
     playerNameStorage = 'player_name',
     gameId = 'default';
@@ -13,76 +11,15 @@ $(document).ready(function () {
         duration: $('#progress').data('max-response-time') * 1000
     });
 
-    // Create the leaflet map
-    map = createMap();
-
-    // Create the marker group used to clear markers between turns
-    markerGroup = new L.LayerGroup().addTo(map);
-
     // Look for a previously entered player name in local storage
     if (typeof(Storage) !== "undefined" && localStorage.getItem(playerNameStorage)) {
-
         // If player name found, start the game using it
         joinGame(localStorage.getItem(playerNameStorage));
-
     } else {
-
         // Else, ask for player name
         login();
-
     }
-
-
 });
-
-/**
- * Create the leaflet map.
- * @returns {Array|*}
- */
-function createMap() {
-
-    // Create a world map
-    var map = L.map('map', {
-        layers: [
-            L.tileLayer('//stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
-                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-                noWrap: true,
-                ext: 'png'
-            })],
-        zoom: 2,
-        maxZoom: 2,
-        minZoom: 2,
-        zoomControl: false,
-        center: [49, 2.5],
-        // Force the user to stay between the given bounds
-        maxBounds: [
-            [-70.0, -180.0],
-            [85.0, 180.0]
-        ]
-
-    });
-
-    // Disable Zoom
-    map.touchZoom.disable();
-    map.doubleClickZoom.disable();
-    map.scrollWheelZoom.disable();
-
-    // Add a legend to the map
-    var legend = L.control({position: 'bottomleft'});
-
-    legend.onAdd = function (map) {
-        var div = L.DomUtil.create('div', 'info legend');
-        div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" alt="Your answer"/> Your answer<br>';
-        div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" alt="Correct answer"/> Correct answer<br>';
-        div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" alt="Best answer"/> Closest answer<br>';
-        return div;
-    };
-
-    legend.addTo(map);
-
-    return map;
-
-}
 
 /**
  * Ask the player for his name and store it in local storage if possible.
@@ -134,7 +71,6 @@ function login() {
  * @param playerName
  */
 function joinGame(playerName) {
-
     // Create the web socket
     socket = io.connect('//' + document.domain + ':' + location.port);
 
@@ -191,19 +127,19 @@ function updateLeaderboard(data) {
  * @param data
  */
 function handleNewTurn(data) {
-
-    // Clear potential markers from previous turn
-    markerGroup.clearLayers();
-
-    // Update game rules to show the city to find
-    $('#game_rules').html('Locate <span class="city">' + data.city + '</span> (' + data.country + ')');
-
+    //Temporary question modification
+    $('input[type=radio][name="radioName"]').prop('checked', false);
+    $('#question').html(data.word);
+    $('#radio1')[0].nextSibling.data = data.options[0]
+    $('#radio2')[0].nextSibling.data = data.options[1]
+    $('#radio3')[0].nextSibling.data = data.options[2]
+    $('#radio4')[0].nextSibling.data = data.options[3]
     // Show countdown timer
     progressBar.animate(1);
 
+    $('input[type=radio][name=radioName]').change(answer)
     // Enable answers for this turn
-    map.on('click', answer);
-
+    // map.on('click', answer);
     // Handle end of turn
     socket.on('end_of_turn', handleEndOfTurn);
 
@@ -220,25 +156,10 @@ function handleNewTurn(data) {
 function handleEndOfTurn(data) {
 
     // Disable answers listener
-    map.off('click', answer);
+    // map.off('click', answer);
 
     // Reset countdown timer
     progressBar.set(0);
-
-    // Clear markers
-    markerGroup.clearLayers();
-
-    // Show best answer if there is one
-    if (data.best_answer) {
-
-        var bestMarker = createMarker(data.best_answer.lat, data.best_answer.lng, 'green');
-        bestMarker.bindPopup('Closest answer (<b>' + round(data.best_answer.distance) + ' km</b> away)');
-
-    }
-
-    // Show correct answer
-    var correctMarker = createMarker(data.correct_answer.lat, data.correct_answer.lng, 'red');
-    correctMarker.bindPopup(data.correct_answer.name);
 
     // Update game rules
     $('#game_rules').html('Waiting for the next turn');
@@ -251,28 +172,6 @@ function handleEndOfTurn(data) {
  */
 function showPlayerResults(data) {
 
-    // Place a marker to identify user answer
-    var userMarker = createMarker(data.lat, data.lng, 'blue');
-
-    // Show user score, ranking and distance
-    var resultsText = '<div class="results"><b>' + round(data.distance) + ' km</b> away: ';
-
-    // Show user score
-    if (data.score == 0) {
-        resultsText += '<span class="score">Too far away!</span>';
-    } else {
-        resultsText += '<span class="score">+<span id="score_value">0</span> points</span>';
-    }
-
-    resultsText += '<br/>You are <b>#' + data.rank + '</b> out of <b>' + data.total + '</b> player(s)</div>';
-
-    userMarker.bindPopup(resultsText).openPopup();
-
-    if (data.score != 0) {
-        // Animate user score
-        animateScore(data.score);
-    }
-
 }
 
 /**
@@ -280,40 +179,9 @@ function showPlayerResults(data) {
  * @param e
  */
 function answer(e) {
-
+    socket.emit('answer', gameId, e.currentTarget.nextSibling.textContent);
     // Disable answers for this turn
-    map.off('click', answer);
-
-    // Mark the answer on the map
-    createMarker(e.latlng.lat, e.latlng.lng, 'blue');
-
-    // Emit answer event
-    socket.emit('answer', gameId, e.latlng.lat, e.latlng.lng);
-
-}
-
-/**
- * Create a marker on the leaflet map.
- * @param lat
- * @param lng
- * @param color
- * @returns {*}
- */
-function createMarker(lat, lng, color) {
-
-    var icon = new L.Icon({
-        iconUrl: '//cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-' + color + '.png',
-        shadowUrl: '//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34]
-    });
-
-    var marker = L.marker([lat, lng], {icon: icon}).addTo(map);
-
-    markerGroup.addLayer(marker);
-
-    return marker;
-
+    // map.off('click', answer);
 }
 
 /**
